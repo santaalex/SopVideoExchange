@@ -4,11 +4,12 @@ import { useState } from 'react';
 
 interface UploadResponse {
   success: boolean;
-  data: {
+  data?: {
     taskId: string;
     title: string;
     videoUrl: string;
   };
+  error?: string;
 }
 
 export default function Home() {
@@ -35,7 +36,7 @@ export default function Home() {
 
       const data: UploadResponse = await response.json();
 
-      if (!data.success) {
+      if (!data.success || !data.data) {
         throw new Error(data.error || 'Upload failed');
       }
 
