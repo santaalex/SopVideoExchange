@@ -2,7 +2,7 @@
 // 边界：封装任务数据，不涉及存储和业务逻辑
 
 import { Video, VideoData } from './Video';
-import { TaskStatus } from '../value-objects/Status';
+import { TaskStatus, Status } from '../value-objects/Status';
 
 export interface TaskData {
   id: string;
@@ -21,7 +21,7 @@ export interface TaskData {
 export class Task {
   private readonly _id: string;
   private readonly _title: string;
-  private _status: TaskStatus;
+  private _status: Status;
   private _originalVideo?: Video;
   private _mandarinSubtitle?: Video;
   private _cantoneseSubtitle?: Video;
@@ -38,7 +38,7 @@ export class Task {
 
     this._id = data.id;
     this._title = data.title;
-    this._status = data.status || TaskStatus.PENDING;
+    this._status = Status.fromString(data.status.toString());
     this._originalVideo = data.originalVideo ? new Video(data.originalVideo) : undefined;
     this._mandarinSubtitle = data.mandarinSubtitle ? new Video(data.mandarinSubtitle) : undefined;
     this._cantoneseSubtitle = data.cantoneseSubtitle ? new Video(data.cantoneseSubtitle) : undefined;
@@ -95,36 +95,36 @@ export class Task {
   }
 
   get isPending(): boolean {
-    return this._status === TaskStatus.PENDING;
+    return this._status.isPending();
   }
 
   get isRunning(): boolean {
-    return this._status === TaskStatus.RUNNING;
+    return this._status.isRunning();
   }
 
   get isCompleted(): boolean {
-    return this._status === TaskStatus.SUCCESS;
+    return this._status.isSuccess();
   }
 
   get isFailed(): boolean {
-    return this._status === TaskStatus.FAILED;
+    return this._status.isFailed();
   }
 
   get canRetry(): boolean {
-    return this._status === TaskStatus.FAILED && this._retryCount < 3;
+    return this._status.isFailed() && this._retryCount < 3;
   }
 
   // State transitions
   markAsRunning(): void {
-    this._status = TaskStatus.RUNNING;
+    this._status = Status.running();
   }
 
   markAsSuccess(): void {
-    this._status = TaskStatus.SUCCESS;
+    this._status = Status.success();
   }
 
   markAsFailed(errorMessage: string): void {
-    this._status = TaskStatus.FAILED;
+    this._status = Status.failed();
     this._errorMessage = errorMessage;
   }
 
