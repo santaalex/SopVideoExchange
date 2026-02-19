@@ -39,11 +39,11 @@ export class Task {
     this._id = data.id;
     this._title = data.title;
     this._status = data.status || TaskStatus.PENDING;
-    this._originalVideo = data.originalVideo;
-    this._mandarinSubtitle = data.mandarinSubtitle;
-    this._cantoneseSubtitle = data.cantoneseSubtitle;
-    this._cantoneseAudio = data.cantoneseAudio;
-    this._outputVideo = data.outputVideo;
+    this._originalVideo = data.originalVideo ? new Video(data.originalVideo) : undefined;
+    this._mandarinSubtitle = data.mandarinSubtitle ? new Video(data.mandarinSubtitle) : undefined;
+    this._cantoneseSubtitle = data.cantoneseSubtitle ? new Video(data.cantoneseSubtitle) : undefined;
+    this._cantoneseAudio = data.cantoneseAudio ? new Video(data.cantoneseAudio) : undefined;
+    this._outputVideo = data.outputVideo ? new Video(data.outputVideo) : undefined;
     this._createdAt = data.createdAt || new Date();
     this._errorMessage = data.errorMessage;
     this._retryCount = data.retryCount || 0;
