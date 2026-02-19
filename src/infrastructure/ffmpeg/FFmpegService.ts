@@ -197,10 +197,9 @@ export class FFmpegService implements IFFmpegService {
     }
   }
 
-  async downloadFile(url: string): Promise<string> {
+  async downloadFile(url: string, savePath?: string): Promise<string> {
     const tempDir = await this.createTempDir();
-    const fileName = path.basename(url).split('?')[0] || 'file';
-    const filePath = path.join(tempDir, fileName);
+    const filePath = savePath || path.join(tempDir, path.basename(url).split('?')[0] || 'file');
 
     const response = await axios.get<Buffer>(url, {
       responseType: 'arraybuffer',

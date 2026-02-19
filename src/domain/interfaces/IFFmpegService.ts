@@ -43,5 +43,5 @@ export interface IFFmpegService {
   getVideoInfo(video: Video): Promise<{ duration: number; width: number; height: number }>;
   
   // 下载远程文件到本地
-  downloadFile(url: string): Promise<string>;
+  downloadFile(url: string, savePath?: string): Promise<string>;
 }
