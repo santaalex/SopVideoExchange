@@ -3,9 +3,9 @@
 
 import axios, { AxiosInstance } from 'axios';
 import { IHAPClient, TaskData, TaskFilter } from '../../domain/interfaces/IHAPClient';
-import { Task } from '../../domain/entities/Task';
-import { Video } from '../../domain/entities/Video';
-import { TaskStatus } from '../../domain/value-objects/Status';
+import { Task, TaskData } from '../../domain/entities/Task';
+import { Video, VideoData } from '../../domain/entities/Video';
+import { TaskStatus, Status } from '../../domain/value-objects/Status';
 import { logger } from '../../utils/logger';
 import { getConfig } from '../../utils/config';
 
@@ -233,9 +233,9 @@ export class HAPClient implements IHAPClient {
         return null;
       }
 
-      const parseVideo = (files?: { name: string; url: string }[]): Video | undefined => {
+      const parseVideo = (files?: { name: string; url: string }[]): VideoData | undefined => {
         if (!files || files.length === 0) return undefined;
-        return Video.fromHAPResponse(files[0]);
+        return files[0];
       };
 
       return new Task({
