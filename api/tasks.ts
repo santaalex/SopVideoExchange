@@ -4,7 +4,7 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { TaskServiceImpl } from '@/application/services/TaskService';
 import { HAPClient } from '@/infrastructure/hap/HAPClient';
-import { TaskStatus } from '@/domain/value-objects/Status';
+import { TaskStatus, Status } from '@/domain/value-objects/Status';
 import { logger } from '@/utils/logger';
 
 export default async function handler(
@@ -26,7 +26,7 @@ export default async function handler(
 
     // 构建筛选条件
     const filter = {
-      status: status ? TaskStatus.fromString(status as string) : undefined,
+      status: status ? Status.fromString(status as string).value : undefined,
       pageSize: pageSize ? parseInt(pageSize as string) : 20,
       pageIndex: pageIndex ? parseInt(pageIndex as string) : 1,
       sortBy: sortBy as 'createdAt' | 'updatedAt' : 'createdAt',
