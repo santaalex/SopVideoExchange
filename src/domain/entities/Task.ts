@@ -1,7 +1,7 @@
 // 任务实体
 // 边界：封装任务数据，不涉及存储和业务逻辑
 
-import { Video } from './Video';
+import { Video, VideoData } from './Video';
 import { TaskStatus } from '../value-objects/Status';
 
 export interface TaskData {
