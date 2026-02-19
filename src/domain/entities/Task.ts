@@ -58,7 +58,7 @@ export class Task {
     return this._title;
   }
 
-  get status(): TaskStatus {
+  get status(): Status {
     return this._status;
   }
 

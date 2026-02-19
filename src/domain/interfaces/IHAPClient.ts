@@ -2,13 +2,13 @@
 // 边界：定义数据持久化的契约，具体实现由 infrastructure 层提供
 
 import { Task } from '../entities/Task';
-import { Video } from '../entities/Video';
+import { Video, VideoData } from '../entities/Video';
 import { TaskStatus } from '../value-objects/Status';
 
 export interface TaskData {
   title: string;
   status?: TaskStatus;
-  originalVideo?: Video;
+  originalVideo?: VideoData;
 }
 
 export interface TaskFilter {
