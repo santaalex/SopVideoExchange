@@ -25,12 +25,15 @@ export default async function handler(
     const taskService = new TaskServiceImpl(hapClient);
 
     // 构建筛选条件
+    const sortByValue = (sortBy as 'createdAt' | 'updatedAt') || 'createdAt';
+    const sortOrderValue = (sortOrder as 'asc' | 'desc') || 'desc';
+    
     const filter = {
       status: status ? Status.fromString(status as string).value : undefined,
       pageSize: pageSize ? parseInt(pageSize as string) : 20,
       pageIndex: pageIndex ? parseInt(pageIndex as string) : 1,
-      sortBy: sortBy as 'createdAt' | 'updatedAt' : 'createdAt',
-      sortOrder: sortOrder as 'asc' | 'desc' : 'desc',
+      sortBy: sortByValue,
+      sortOrder: sortOrderValue,
     };
 
     // 获取任务列表
