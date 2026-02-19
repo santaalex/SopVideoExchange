@@ -8,11 +8,11 @@ export interface TaskData {
   id: string;
   title: string;
   status: TaskStatus;
-  originalVideo?: Video;
-  mandarinSubtitle?: Video;
-  cantoneseSubtitle?: Video;
-  cantoneseAudio?: Video;
-  outputVideo?: Video;
+  originalVideo?: VideoData;
+  mandarinSubtitle?: VideoData;
+  cantoneseSubtitle?: VideoData;
+  cantoneseAudio?: VideoData;
+  outputVideo?: VideoData;
   createdAt?: Date;
   errorMessage?: string;
   retryCount?: number;
@@ -158,7 +158,7 @@ export class Task {
     return {
       id: this._id,
       title: this._title,
-      status: this._status,
+      status: this._status.value,
       originalVideo: this._originalVideo?.toJSON(),
       mandarinSubtitle: this._mandarinSubtitle?.toJSON(),
       cantoneseSubtitle: this._cantoneseSubtitle?.toJSON(),
