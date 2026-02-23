@@ -1,0 +1,16 @@
+ ｜id | name | alias | type | value | 
+ | --- | --- | --- | --- | --- | 
+| 69971f499e51af719b1d557e | 视频标题 | title | 文本框 | 宏业测试视频 |
+| 69971f499e51af719b1d5580 | 原始视频 | original_video | 附件 | [{"file_id":"8434a6a8-2817-46a8-9469-204414dc52e6","thumbnail_path":"https://d1.mingdaoyun.cn/2f511736-e7f6-43f8-8450-f8b54cd9c7ef/acecf90a-602e-44b8-98d5-f43cc79ae096/69971f499e51af719b1d557d/20260220/4zfc0o3acaaddl2d9H2O9B0Tas34aP4kd83R3KcF6na6fyek35fNcL4r5meK1J2T.mp4?vframe/jpg/offset/1/rotate/auto%7CimageView2/0/w/400/format/jpg&e=1772209732&token=mN_sp-Y4_5zePppXZC8fTktRmKMNiYlC8jl_yeGZ:Ult1HtrkA5CeO0YJjYQ3lrUzPRk=","thumbnail_name":"","large_thumbnail_path":null,"large_thumbnail_name":null,"file_path":"https://doc.mingdao.com/2f511736-e7f6-43f8-8450-f8b54cd9c7ef/acecf90a-602e-44b8-98d5-f43cc79ae096/69971f499e51af719b1d557d/20260220/","file_name":"4zfc0o3acaaddl2d9H2O9B0Tas34aP4kd83R3KcF6na6fyek35fNcL4r5meK1J2T.mp4","file_size":53483013,"is_delete":false,"file_type":2,"original_file_name":"20260209222057-宏業模具需求溝通-视频-1.mp4","allow_down":true,"original_file_full_path":"https://d1.mingdaoyun.cn/2f511736-e7f6-43f8-8450-f8b54cd9c7ef/acecf90a-602e-44b8-98d5-f43cc79ae096/69971f499e51af719b1d557d/20260220/4zfc0o3acaaddl2d9H2O9B0Tas34aP4kd83R3KcF6na6fyek35fNcL4r5meK1J2T.mp4?attname=20260209222057-%e5%ae%8f%e6%a5%ad%e6%a8%a1%e5%85%b7%e9%9c%80%e6%b1%82%e6%ba%9d%e9%80%9a-%e8%a7%86%e9%a2%91-1.mp4&e=1771608532&token=mN_sp-Y4_5zePppXZC8fTktRmKMNiYlC8jl_yeGZ:aKl6cETB1XsoJBdtMqh1dBxcHV8=","origin_link_url":null,"short_link_url":null,"share_folder_url":null,"is_knowledge":false,"node_id":"","allow_view":true,"width":0,"height":0,"duration":0.0,"allow_edit":false,"DownloadUrl":"https://d1.mingdaoyun.cn/2f511736-e7f6-43f8-8450-f8b54cd9c7ef/acecf90a-602e-44b8-98d5-f43cc79ae096/69971f499e51af719b1d557d/20260220/4zfc0o3acaaddl2d9H2O9B0Tas34aP4kd83R3KcF6na6fyek35fNcL4r5meK1J2T.mp4?e=1771608532&token=mN_sp-Y4_5zePppXZC8fTktRmKMNiYlC8jl_yeGZ:x9eG4BmoOKXFlnCjae45dVmSyyA=","WaterMarkInfo":null,"preview_url":null,"createTime":"2026-02-20 23:40:30"}] |
+| 699720406272340c521f50b3 | 普通话字幕(srt) | mandarin_subtitle | 附件 |  |
+| 699720406272340c521f50b4 | 粤语字幕(srt) | cantonese_subtitle | 附件 |  |
+| 699720406272340c521f50b5 | 粤语配音(audio) | cantonese_audio | 附件 |  |
+| 699720406272340c521f50b6 | 最终输出视频 | output_video | 附件 |  |
+| 699720406272340c521f50b7 | 创建时间 | created_at | 日期 |  |
+| 699720406272340c521f50b8 | status |  | 下拉 | [] |
+| rowid | 记录ID | rowId | 文本框 | ca494dad-404b-4d73-b4e4-990017b918b6 |
+| ownerid | 拥有者 | _owner | 成员 | [{"AccountId":"d9c8cf84-438c-4bb6-9fa2-be2c406d6a65","FullName":"王劭禹"}] |
+| caid | 创建人 | _createdBy | 成员 | [{"AccountId":"d9c8cf84-438c-4bb6-9fa2-be2c406d6a65","FullName":"王劭禹"}] |
+| ctime | 创建时间 | _createdAt | 日期和时间 | 2026-02-20 23:40:30 |
+| utime | 最近修改时间 | _updatedAt | 日期和时间 | 2026-02-20 23:40:30 |
+| uaid | 最近修改人 | _updatedBy | 成员 | [{"AccountId":"d9c8cf84-438c-4bb6-9fa2-be2c406d6a65","FullName":"王劭禹"}] |

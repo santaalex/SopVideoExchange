@@ -1,0 +1,19 @@
+# Local Env
+.env
+
+# Testing Scripts
+test_*.py
+deploy.py
+test_ssh.py
+
+# Video Output and Temporary Subtitles
+*.mov
+*.mp4
+*.srt
+*.wav
+ffprobe_*.txt
+vinfo.txt
+
+# Brain Context
+MY_BRAIN/
+.brain_context*

@@ -1,0 +1,16 @@
+﻿.\.venv\Scripts\python.exe : INFO:     Started se
+rver process [9244]
+所在位置 行:1 字符: 1
++ .\.venv\Scripts\python.exe -m uvicorn src.main:
+app --host 0.0.0.0 --p ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (INF 
+   O:     Started server process [9244]:String)  
+   [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+INFO:     Uvicorn running on http://0.0.0.0:8001 
+(Press CTRL+C to quit)

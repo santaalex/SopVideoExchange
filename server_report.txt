@@ -1,0 +1,37 @@
+
+--- OS Info ---
+> uname -a
+Linux vm 6.8.0-59-generic #61-Ubuntu SMP PREEMPT_DYNAMIC Fri Apr 11 23:16:11 UTC 2025 x86_64 x86_64 x86_64 GNU/Linux
+> cat /etc/os-release | grep PRETTY_NAME
+PRETTY_NAME="Ubuntu 24.04.1 LTS"
+
+
+--- CPU Info ---
+> lscpu | grep 'Model name\|CPU(s):'
+CPU(s):                               4
+Model name:                           Intel Xeon Processor (Cascadelake)
+BIOS Model name:                      RHEL 7.6.0 PC (i440FX + PIIX, 1996)  CPU @ 2.0GHz
+NUMA node0 CPU(s):                    0-3
+
+
+--- Memory Info ---
+> free -h
+total        used        free      shared  buff/cache   available
+Mem:            15Gi       983Mi        10Gi       2.9Mi       4.4Gi        14Gi
+Swap:          2.8Gi          0B       2.8Gi
+
+
+--- Disk Space ---
+> df -h /
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/vda2       100G   12G   89G  12% /
+
+
+--- Docker Status ---
+> docker --version
+Docker version 29.2.1, build a5c7197
+> docker ps --format 'table {{.Names}}	{{.Status}}	{{.Ports}}'
+NAMES          STATUS                PORTS
+fuinno_cron    Up 2 days             
+fuinno_nginx   Up 3 days             0.0.0.0:3000->80/tcp, [::]:3000->80/tcp
+fuinno_web     Up 3 days (healthy)

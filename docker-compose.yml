@@ -1,0 +1,24 @@
+version: '3.8'
+
+services:
+  sop_video_service:
+    build: .
+    container_name: sop_video_service
+    restart: unless-stopped
+    ports:
+      # Expose as port 9000 on host per user request
+      - "9000:8000"
+    environment:
+      # Mingdao Credentials
+      - HAP_APP_KEY=${HAP_APP_KEY}
+      - HAP_SIGN=${HAP_SIGN}
+      - HAP_WORKSHEET_ID=${HAP_WORKSHEET_ID}
+      # Aliyun DashScope & NLS Credentials
+      - ALIYUN_AK_ID=${ALIYUN_AK_ID}
+      - ALIYUN_AK_SECRET=${ALIYUN_AK_SECRET}
+      - DASHSCOPE_API_KEY=${DASHSCOPE_API_KEY}
+      - NLS_APP_KEY=${NLS_APP_KEY}
+      # Dynamic Host URL for Mingdao "URL Pull Strategy"
+      - PUBLIC_HOST_URL=http://219.151.179.8:9000
+    volumes:
+      - ./tmp_workspace:/app/tmp_workspace

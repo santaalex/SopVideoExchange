@@ -1,0 +1,19 @@
+﻿.\.venv\Scripts\python.exe : INFO:     Started se
+rver process [31436]
+所在位置 行:1 字符: 1
++ .\.venv\Scripts\python.exe -m uvicorn src.main:
+app --host 0.0.0.0 --p ...
++ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSpecified: (INF 
+   O:     Started server process [31436]:String  
+  ) [], RemoteException
+    + FullyQualifiedErrorId : NativeCommandError
+ 
+INFO:     Waiting for application startup.
+INFO:     Application startup complete.
+ERROR:    [Errno 10048] error while attempting to
+ bind on address ('0.0.0.0', 8000): [winerror 100
+48] 通常每个套接字地址(协议/网络地址/端口)只允许使用一次。
+INFO:     Waiting for application shutdown.
+INFO:     Application shutdown complete.
